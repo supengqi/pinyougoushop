@@ -46,5 +46,17 @@ app.controller('baseController' ,function($scope){
 		return value;
 	}
 	
+	// 在List集合中根据某key值查询对象
+	$scope.searchObjectByKey=function(list,key,keyValue) {
+		for (var i = 0; i < list.length; i++) {
+			// 选择选项规格名称已经存在
+			if(list[i][key]==keyValue) {
+				return list[i];
+			}
+		}
+		// 选择选项规格名称不存在
+		return null;
+	}
+	
 	
 });	

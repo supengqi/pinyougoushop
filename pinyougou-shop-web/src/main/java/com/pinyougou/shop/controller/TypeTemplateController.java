@@ -112,6 +112,9 @@ public class TypeTemplateController {
 		return typeTemplateService.findPage(typeTemplate, page, rows);		
 	}
 	
-
+	@RequestMapping("/findSpecList")
+	public List<Map> findSpecList(Long id) {
+		return typeTemplateService.findSpecList(id);
+	}
 	
 }
